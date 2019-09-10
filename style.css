@@ -232,4 +232,21 @@ li {
     .error-message-content {
         width: 300px;
     }
+    body {
+        min-height: 100vh;
+    }
+}
+
+@media screen and (min-width: 2000px) {
+    .container {
+      width: 60vw;
+      height: 80vh;
+      font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 2400px) {
+    .container {
+      font-size: 2rem;
+    }
 }
