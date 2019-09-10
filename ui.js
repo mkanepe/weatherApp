@@ -18,7 +18,7 @@ class UI {
     this.location.textContent = `${weather.name}, ${weather.sys.country}`;
     this.description.textContent = weather.weather[0].description;
     this.temp.textContent = `${(weather.main.temp).toFixed(1)}\xB0 C`;
-    this.icon.setAttribute('src', `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
+    this.icon.setAttribute('src', `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`);
     this.humidity.textContent = `Relative humidity: ${weather.main.humidity}%`;
     this.dewpoint.textContent = `Athmospheric pressure: ${weather.main.pressure} hPA`;
     this.feelslike.textContent = `Clouds: ${weather.clouds.all}%`;
