@@ -110,3 +110,9 @@ function errorMsg() {
     errorModal.style.display = 'none';
   }, 2000);
 }
+
+/* Resize window height for mobile devices */
+window.onresize = function() {
+  document.body.height = window.innerHeight;
+}
+window.onresize();
