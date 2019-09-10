@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --font-color: #fff;
+    --main-btn-color: rgba(230,0,35, 0.6);
+    --main-btn-hover: #c72339;
+    --secondary-btn-color: #e60023;
+    --secondary-btn-hover: #b60023;
+    --container-background: rgba(127, 127, 133, 0.5);
+}
+
+html { 
+    background: url(https://source.unsplash.com/featured/?weather) no-repeat center center fixed; 
+    background-size: cover;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--font-color);
+}
+
+.container {
+    background: var(--container-background);
+    border-radius: 5px;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    padding: 1rem;
+    min-height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.init {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon {
+    height: 50%;
+    width: 50%;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1rem;
+}
+
+#temp {
+    margin-bottom: 0;
+}
+
+ul {
+    margin-bottom: 1rem;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+.btn {
+    background: var(--main-btn-color);
+    border-radius: 3px;
+    border: none;
+    color: var(--font-color);
+    display: inline-block;
+    font-size: 14px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    min-width: 60px;
+    position: relative;
+    transition: color .1s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background: var(--main-btn-hover);
+    outline: none;
+    cursor: pointer;
+}
+
+.btn.btn-big {
+    font-size: 18px;
+    padding: 15px 20px;
+    min-width: 100px;
+}
+
+.modal-footer .btn {
+    background: var(--secondary-btn-color);
+}
+
+.modal-footer .btn:hover,
+.modal-footer .btn:focus {
+    background: var(--secondary-btn-hover);
+}
+
+
+/* MODAL WINDOW */
+/* modal */
+.modal,
+.error-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    color: #333;
+    text-align: center;
+}
+
+/* modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+/* close button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/* header & footer */
+.modal-header,
+.modal-footer {
+    padding: 10px 20px;
+}
+
+.modal-header {
+    border-bottom: #eeeeee solid 1px;
+}
+
+.modal-header h2 {
+    margin-bottom: 0;
+}
+
+/* modal body */
+.modal-body .city-input{
+    width:200px;
+    padding:8px;
+    border:1px solid #ddd;
+    color:#888;
+    outline:0;
+    font-size:14px;
+    font-weight:bold;
+    margin-top: 10px;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+/* error message modal window */
+.error-message-content {
+    background: rgba(230,0,35, 0.8);
+    color: var(--font-color);
+    margin: auto;
+    width: 400px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.error-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.error-message h1 {
+    margin: 0;
+}
+
+/* Update time and icon rotation */
+#update {
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+.fas.fa-sync-alt {
+    cursor: pointer;
+    transition: 3s;
+}
+
+.rotate {
+    transform: rotate(1440deg);
+}
+
+
+/* Mobile */
+@media only screen and (max-width: 420px) {
+    .container {
+        width: 90vw;
+    }
+    .modal-content,
+    .error-message-content {
+        width: 300px;
+    }
+}
