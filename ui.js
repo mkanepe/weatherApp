@@ -24,6 +24,8 @@ class UI {
     this.feelslike.textContent = `Clouds: ${weather.clouds.all}%`;
     this.wind.textContent = `Wind speed: ${weather.wind.speed} m/s`;
     this.winddirection.textContent = `Wind direction: ${degToCard(weather.wind.deg)}`;
+
+    document.querySelector('.data').classList.add('fade-in');
   }
 
   // display last update time

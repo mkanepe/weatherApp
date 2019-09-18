@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -220,6 +220,60 @@ li {
 
 .rotate {
     transform: rotate(1440deg);
+}
+
+/* fade in animation */
+.fade-in {
+    -webkit-animation: fadein 2s; /* Safari & Chrome */
+    -moz-animation: fadein 2s; /* Firefox */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera */
+    animation: fadein 2s;
+}
+
+@-webkit-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-moz-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-ms-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-o-keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
 

@@ -65,6 +65,12 @@ document.addEventListener('click', (e) => {
   if(e.target.classList.contains('fa-sync-alt')) {
     // rotate icon
     e.target.classList.add('rotate');
+
+    // remove fade-in class if it exists
+    if(document.querySelector('.data').classList.contains('fade-in')) {
+      document.querySelector('.data').classList.remove('fade-in');  
+    }
+
     // take weather location from storage
     weather.changeLocation(localStorage.getItem('city'));
 
@@ -89,6 +95,11 @@ const span = document.querySelector('.close');
 btn.onclick = function() {
   modal.style.display = 'grid';
   document.querySelector('.city-input').focus();
+
+  // remove fade-in class if ir exists
+  if(document.querySelector('.data').classList.contains('fade-in')) {
+    document.querySelector('.data').classList.remove('fade-in');  
+  }
 }
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
